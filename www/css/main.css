@@ -1,0 +1,67 @@
+@charset UTF-8;
+
+/*------------------------------------------------------------------
+[Style Index]
+
+0. Custom reset
+1. NavBar
+2. Main Content styling
+3. Content styling (Order)
+4. Content styling (Address)
+5. Content styling (Finish)
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[0. Custom Reset]
+
+Reseting styles for individual elements
+-------------------------------------------------------------------*/
+
+html, body {
+	background: url(/img/background-picture.jpeg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+
+}
+
+body {
+	font-size: 16px;
+	font-family: "PT Sans", serif;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+
+/*------------------------------------------------------------------
+[1. NavBar]
+
+-------------------------------------------------------------------*/
+
+#nav-bar{
+	
+	background-color:rgba(255,255,255,0.1);
+}
+
+#nav-bar a{
+	font-size: 0.75em;
+	font-weight: 600;
+}
+
+#nav-bar .btn{
+	background-color: #e83e3e;
+}
+
+.brand-logo{
+	margin-left: 2%;
+}
+
+.brand-logo img{
+	display: inline;
+	height: 20px;
+	margin-top: 20px;
+	padding-right: 10px;
+}
