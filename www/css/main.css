@@ -5,7 +5,7 @@
 
 0. Custom reset
 1. NavBar
-2. Main Content styling
+2. Main Layout
 3. Content styling (Order)
 4. Content styling (Address)
 5. Content styling (Finish)
@@ -36,6 +36,10 @@ body {
 }
 
 
+.red-button, .red-button:hover{
+	background-color: #e83e3e;
+}
+
 /*------------------------------------------------------------------
 [1. NavBar]
 
@@ -51,9 +55,6 @@ body {
 	font-weight: 600;
 }
 
-#nav-bar .btn{
-	background-color: #e83e3e;
-}
 
 .brand-logo{
 	margin-left: 2%;
@@ -64,4 +65,50 @@ body {
 	height: 20px;
 	margin-top: 20px;
 	padding-right: 10px;
+}
+
+
+/*------------------------------------------------------------------
+[2. Main Layout]
+
+-------------------------------------------------------------------*/
+
+#main-layout{
+	margin-top:40px;
+}
+
+#main-layout .today-meal, .tomorrow-meal{
+	font-size: 1.25em;
+}
+
+#main-layout .today-meal span{
+	border-bottom: solid 3px #e83e3e ;
+	font-weight: 600;
+	white-space: nowrap;
+
+}
+
+#main-layout .red-button{
+	margin-top:80px;
+	box-shadow: 0 5px 0 0 #bc3232;
+	position: relative;
+}
+
+#main-layout .red-button:hover{
+	top:2px;
+	box-shadow: 0 3px 0 0 #bc3232;
+}
+
+#main-layout .tomorrow-meal{
+	margin-top: 180px;
+}
+
+#main-layout .made-with-love{
+	margin-top: 20px;
+	font-size: 0.8em;
+}
+
+#main-layout .scroll-img{
+	height: 25px;
+	margin-top: 20px;
 }
