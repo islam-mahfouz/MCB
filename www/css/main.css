@@ -3,19 +3,19 @@
 /*------------------------------------------------------------------
 [Style Index]
 
-0. Custom reset
+0. Custom reset and utilities 
 1. NavBar
 2. Main Layout
-3. Content styling (Order)
+3. Order layout
 4. Content styling (Address)
 5. Content styling (Finish)
 -------------------------------------------------------------------*/
 
 
 /*------------------------------------------------------------------
-[0. Custom Reset]
+[0. Custom Reset and utilities]
 
-Reseting styles for individual elements
+Reseting styles for individual elements and create utility classes
 -------------------------------------------------------------------*/
 
 html, body {
@@ -35,6 +35,33 @@ body {
 	color: #fff;
 }
 
+.margin-top-10{
+	margin-top:10px;
+}
+
+.margin-top-20{
+	margin-top:20px;
+}
+
+.margin-top-30{
+	margin-top:30px;
+}
+
+.margin-top-40{
+	margin-top:40px;
+}
+
+.margin-top-50{
+	margin-top:50px;
+}
+
+.margin-top-60{
+	margin-top:60px;
+}
+
+.bold{
+	font-weight: 600;
+}
 
 .red-button, .red-button:hover{
 	background-color: #e83e3e;
@@ -111,4 +138,98 @@ body {
 #main-layout .scroll-img{
 	height: 25px;
 	margin-top: 20px;
+}
+
+/*------------------------------------------------------------------
+[3. Order Layout]
+
+-------------------------------------------------------------------*/
+
+#order-layout{
+	max-width: 600px;
+	margin-top: 40px;
+	color:black;
+}
+
+#order-layout h5{
+	font-weight: 600;
+}
+
+
+#order-layout ul li:not(:last-child){
+	padding-right: 25px;
+	
+}
+
+#order-layout ul li{
+	display: inline-block;
+}
+
+#order-layout ul{
+	padding-left: 40px;
+}
+
+#order-layout .circle-20{
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  border: 3px solid #dddddd;
+  border-radius: 50%;
+  color: #666;
+  background: #fff;
+  text-align: center;
+  vertical-align: middle;
+
+ }
+
+#order-layout .circle-30{
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  border: 3px solid #dddddd;
+  border-radius: 50%;
+  color: #666;
+  background: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#order-layout .circle-40{
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  border: 3px solid #dddddd;
+  border-radius: 50%;
+  color: #666;
+  background: #fff;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+#order-layout .hovered-circle:hover{
+	background-color: #e83e3e;
+	cursor: pointer;
+	color: white;
+}
+
+#order-layout .active{
+	background-color: #e83e3e;
+	color:white;
+}
+
+#order-layout select{
+	background-color: #ededed;
+	color: black;
+	opacity: 0.4;
+	margin-top: 15px;
+	border:1px solid black;
+
+	
+}
+
+#order-layout .add-ingredient{
+	color:#ffcc42;
+	padding-top: 8px;
+	cursor: pointer;
 }
