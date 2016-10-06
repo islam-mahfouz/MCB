@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router';
 
 export default class Order extends React.Component {
 constructor() {
@@ -49,7 +49,7 @@ constructor() {
 					    	<span class="lever"></span>
 					    	yes</label>
 					    </div>
-					    <a class="waves-effect waves-light btn red-button margin-top-40"><i class="material-icons right">arrow_forward</i>Next</a>
+					    <Link to="Address" class="waves-effect waves-light btn red-button margin-top-40"><i class="material-icons right">arrow_forward</i>Next</Link>
 			          </div>
 			        </div>
 			</div>

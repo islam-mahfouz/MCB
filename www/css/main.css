@@ -7,7 +7,7 @@
 1. NavBar
 2. Main Layout
 3. Order layout
-4. Content styling (Address)
+4. Address layout
 5. Content styling (Finish)
 -------------------------------------------------------------------*/
 
@@ -233,3 +233,10 @@ body {
 	padding-top: 8px;
 	cursor: pointer;
 }
+
+
+/*------------------------------------------------------------------
+[4. Address layout]
+
+-------------------------------------------------------------------*/
+
