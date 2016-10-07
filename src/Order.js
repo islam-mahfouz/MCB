@@ -5,8 +5,36 @@ export default class Order extends React.Component {
 constructor() {
     super()
     this.state = {
-      selectedCircle:{} ,
+      selectedCircle:{},
+      cheeseAdd: false
     };
+  }
+
+  onAddCheese(){
+  	let add = !this.state.cheeseAdd;
+
+  	this.setState({cheeseAdd : add});
+  }
+
+  saveAndContinue(e){
+    e.preventDefault();
+    var pizzaObject = JSON.stringify(this.state.selectedCircle);
+    var pizza = pizzaObject.substring(2,4);
+    if(this.state.cheeseAdd == true)
+    {
+    	var cheeseChoice = "Yes";
+    }
+    else{
+    	var cheeseChoice = "No"
+    }
+    var data = {
+       pizzaSize   : pizza,
+       cheese      : cheeseChoice,
+       Ingredients : []
+    }
+
+    this.props.saveValues(data);
+    this.props.nextCase();
   }
 
  toggleChoice(name, event) {
@@ -28,9 +56,9 @@ constructor() {
 			          	<h5 class="bold">Your Order</h5>
 			          	<p class="margin-top-30 bold">Choose Pizza size in cm</p>
 			          	<ul class="margin-top-30">
-				          	<li ><div onClick={this.toggleChoice.bind(this, "first")} class={"circle-20 hovered-circle " + this.state.selectedCircle["first"]}>20</div></li>
-				          	<li ><div onClick={this.toggleChoice.bind(this, "second")} class={"circle-30 hovered-circle " + this.state.selectedCircle["second"]}>30</div></li>
-				          	<li ><div onClick={this.toggleChoice.bind(this, "third")} class={"circle-40 hovered-circle " + this.state.selectedCircle["third"]}>40</div></li>
+				          	<li ><div onClick={this.toggleChoice.bind(this, "20")} class={"circle-20 hovered-circle " + this.state.selectedCircle["20"]}>20</div></li>
+				          	<li ><div onClick={this.toggleChoice.bind(this, "30")} class={"circle-30 hovered-circle " + this.state.selectedCircle["30"]}>30</div></li>
+				          	<li ><div onClick={this.toggleChoice.bind(this, "40")} class={"circle-40 hovered-circle " + this.state.selectedCircle["40"]}>40</div></li>
 				        </ul> 
 			         	<p class="bold margin-top-20">Ingredients:</p>
 			         	<div class="row">
@@ -45,12 +73,12 @@ constructor() {
 					    <p class="bold margin-top-30">Cheese rand ?</p>
 					    <div class="switch margin-top-20">
 					    	<label>no
-					    	<input type="checkbox" />
+					    	<input ref="cheeseRand" type="checkbox" checked={this.state.cheeseAdd} onChange={this.onAddCheese.bind(this)}  />
 					    	<span class="lever"></span>
 					    	yes</label>
 					    </div>
 					    <div class="divider margin-top-30"></div>
-					    <Link to="Address" class="waves-effect waves-light btn red-button margin-top-20"><i class="material-icons right">arrow_forward</i>Next</Link>
+					    <button onClick={this.saveAndContinue.bind(this)} class="waves-effect waves-light btn red-button margin-top-20"><i class="material-icons right">arrow_forward</i>Next</button>
 			          </div>
 			        </div>
 			</div>

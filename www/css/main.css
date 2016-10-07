@@ -5,10 +5,10 @@
 
 0. Custom reset and utilities 
 1. NavBar
-2. Main Layout
+2. Homepage
 3. Order layout
 4. Address layout
-5. Content styling (Finish)
+5. Confirmation layout
 -------------------------------------------------------------------*/
 
 
@@ -77,6 +77,18 @@ body {
 	clear: both;
 }
 
+.back-btn{
+	font-size: 0.8em;
+	padding-top: 30px;
+	color: #A8A8A8;
+	cursor: pointer;
+}
+
+.back-arrow{
+	padding-right: 10px;
+}
+
+
 
 /*------------------------------------------------------------------
 [1. NavBar]
@@ -107,46 +119,46 @@ body {
 
 
 /*------------------------------------------------------------------
-[2. Main Layout]
+[2. Homepage]
 
 -------------------------------------------------------------------*/
 
-#main-layout{
+#homepage{
 	margin-top:40px;
 }
 
-#main-layout .today-meal, .tomorrow-meal{
+#homepage .today-meal, .tomorrow-meal{
 	font-size: 1.25em;
 }
 
-#main-layout .today-meal span{
+#homepage .today-meal span{
 	border-bottom: solid 3px #e83e3e ;
 	font-weight: 600;
 	white-space: nowrap;
 
 }
 
-#main-layout .red-button{
+#homepage .red-button{
 	margin-top:80px;
 	box-shadow: 0 5px 0 0 #bc3232;
 	position: relative;
 }
 
-#main-layout .red-button:hover{
+#homepage .red-button:hover{
 	top:2px;
 	box-shadow: 0 3px 0 0 #bc3232;
 }
 
-#main-layout .tomorrow-meal{
+#homepage .tomorrow-meal{
 	margin-top: 180px;
 }
 
-#main-layout .made-with-love{
+#homepage .made-with-love{
 	margin-top: 20px;
 	font-size: 0.8em;
 }
 
-#main-layout .scroll-img{
+#homepage .scroll-img{
 	height: 25px;
 	margin-top: 20px;
 }
@@ -260,13 +272,10 @@ body {
 	padding-top: 27px;
 }
 
-#address-layout .back-btn{
-	font-size: 0.8em;
-	padding-top: 30px;
-	color: #A8A8A8;
-}
 
-#address-layout .back-arrow{
-	padding-right: 10px;
-}
+
+/*------------------------------------------------------------------
+[4. Confirmation layout]
+
+-------------------------------------------------------------------*/
 
