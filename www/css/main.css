@@ -67,6 +67,17 @@ body {
 	background-color: #e83e3e;
 }
 
+.card-layout{
+	max-width: 600px;
+	margin-top: 40px;
+	color:black;
+}
+
+.clear-fix{
+	clear: both;
+}
+
+
 /*------------------------------------------------------------------
 [1. NavBar]
 
@@ -145,16 +156,6 @@ body {
 
 -------------------------------------------------------------------*/
 
-#order-layout{
-	max-width: 600px;
-	margin-top: 40px;
-	color:black;
-}
-
-#order-layout h5{
-	font-weight: 600;
-}
-
 
 #order-layout ul li:not(:last-child){
 	padding-right: 25px;
@@ -213,7 +214,7 @@ body {
 	color: white;
 }
 
-#order-layout .active{
+#order-layout .active-circle{
 	background-color: #e83e3e;
 	color:white;
 }
@@ -239,4 +240,33 @@ body {
 [4. Address layout]
 
 -------------------------------------------------------------------*/
+
+#address-layout p {
+	padding-bottom: 15px;
+	font-size: 0.8em;
+}
+
+#address-layout input{
+	border:2px solid #ededed;
+	padding-left: 10px;
+	background-color:rgba(237,237,237,0.5)
+}
+
+#address-layout .row{
+	margin-bottom:0; 
+}
+
+#address-layout .street-no, #address-layout .city{
+	padding-top: 27px;
+}
+
+#address-layout .back-btn{
+	font-size: 0.8em;
+	padding-top: 30px;
+	color: #A8A8A8;
+}
+
+#address-layout .back-arrow{
+	padding-right: 10px;
+}
 

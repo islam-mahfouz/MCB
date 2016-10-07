@@ -12,20 +12,20 @@ constructor() {
  toggleChoice(name, event) {
      let selected = this.state.selectedCircle;
      selected = {};
-     selected[name] = this.state.selectedCircle[name] == "active" ? "" : "active";
+     selected[name] = this.state.selectedCircle[name] == "active-circle" ? "" : "active-circle";
      this.setState({selectedCircle: selected});
   }
 
   render() {
   	const { selected } = this.state;
-  	const selectedCircle = selected ? "active":"";
+  	const selectedCircle = selected ? "active-circle":"";
     return (
-		<div class="container" id="order-layout">
+		<div class="container card-layout" id="order-layout">
 			<div class="row">
 				
 			        <div class="card-panel white">
 			          <div class="center">
-			          	<h5>Your Order</h5>
+			          	<h5 class="bold">Your Order</h5>
 			          	<p class="margin-top-30 bold">Choose Pizza size in cm</p>
 			          	<ul class="margin-top-30">
 				          	<li ><div onClick={this.toggleChoice.bind(this, "first")} class={"circle-20 hovered-circle " + this.state.selectedCircle["first"]}>20</div></li>
@@ -49,7 +49,8 @@ constructor() {
 					    	<span class="lever"></span>
 					    	yes</label>
 					    </div>
-					    <Link to="Address" class="waves-effect waves-light btn red-button margin-top-40"><i class="material-icons right">arrow_forward</i>Next</Link>
+					    <div class="divider margin-top-30"></div>
+					    <Link to="Address" class="waves-effect waves-light btn red-button margin-top-20"><i class="material-icons right">arrow_forward</i>Next</Link>
 			          </div>
 			        </div>
 			</div>
