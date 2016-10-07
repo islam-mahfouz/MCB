@@ -12,6 +12,11 @@ constructor() {
     super()
     this.state = {
       step: 1 ,
+      navBarImg: "/img/logo/feedme_logo_white.png",
+      nav1: "OVERVIEW",
+      nav2: "TODAY'S MEAL",
+      nav3: "MORE",
+      navButton: "ORDER TODAY'S MEAL"
     };
   }	
 
@@ -26,7 +31,7 @@ constructor() {
   		case 1:
   		return(
       <div>
-  		<NavBar nextStep={this.nextStep.bind(this)} />
+  		<NavBar nextStep={this.nextStep.bind(this)} navBarImg={this.state.navBarImg} navButton={this.state.navButton} nav1={this.state.nav1} nav2={this.state.nav2} nav3={this.state.nav3} />
       	<Homepage nextStep={this.nextStep.bind(this)} />
       </div>);
 

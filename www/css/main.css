@@ -100,11 +100,18 @@ body {
 	background-color:rgba(255,255,255,0.1);
 }
 
+#nav-bar .white{
+	background-color: white;
+}
+
 #nav-bar a{
 	font-size: 0.75em;
 	font-weight: 600;
 }
 
+#nav-bar .text-black{
+	color: black;
+}
 
 .brand-logo{
 	margin-left: 2%;

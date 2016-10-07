@@ -6,21 +6,21 @@ export default class NavBar extends React.Component {
   
   render() {
     return (
-		<nav id="nav-bar">
+		<nav id="nav-bar" class={this.props.navBarColor}>
 		    <div class="nav-wrapper">
-		      <a href="#" class="brand-logo"><img src="/img/logo/feedme_logo_white.png" />feed.me</a>
-		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		      <a href="#" class={"brand-logo " + this.props.navBarText}><img src={this.props.navBarImg} />feed.me</a>
+		      <a href="#" data-activates="mobile-demo" class={"button-collapse " + this.props.navBarText}><i class="material-icons">menu</i></a>
 		      <ul  class="right hide-on-med-and-down">
-		        <li><a href="JavaScript:">OVERVIEW</a></li>
-		        <li><a href="JavaScript:">TODAY'S MEAL</a></li>
-		        <li><a href="JavaScript:">MORE</a></li>
-		        <li><button onClick={this.props.nextStep} class="waves-effect waves-light btn red-button">ORDER TODAY'S MEAL</button></li>
+		        <li><a class={this.props.navBarText} href="JavaScript:">{this.props.nav1}</a></li>
+		        <li><a  href="JavaScript:">{this.props.nav2}</a></li>
+		        <li><a  href="JavaScript:">{this.props.nav3}</a></li>
+		        <li><a onClick={this.props.nextStep} class="waves-effect waves-light btn red-button">{this.props.navButton}</a></li>
 		      </ul>
 		      <ul  class="side-nav" id="mobile-demo">
-		        <li><a href="JavaScript:">OVERVIEW</a></li>
-		        <li><a href="JavaScript:">TODAY'S MEAL</a></li>
-		        <li><a href="JavaScript:">MORE</a></li>
-		        <li><button onClick={this.props.nextStep} class="waves-effect waves-light btn red-button">ORDER TODAY'S MEAL</button></li>
+		        <li><a href="JavaScript:">{this.props.nav1}</a></li>
+		        <li><a href="JavaScript:">{this.props.nav2}</a></li>
+		        <li><a href="JavaScript:">{this.props.nav3}</a></li>
+		        <li><a onClick={this.props.nextStep} class="waves-effect waves-light btn red-button">{this.props.navButton}</a></li>
 		      </ul>
 		    </div>
 	  	</nav>
