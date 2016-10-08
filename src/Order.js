@@ -52,6 +52,12 @@ constructor() {
      this.setState({selectedCircle: selected});
   }
 
+  addIngredient(){
+
+    var ingredientDiv = this.state.ingredient;
+    document.getElementById('ing').innerHTML = ingredientDiv;
+  }
+
   render() {
   	const { selected } = this.state;
   	const selectedCircle = selected ? "active-circle":"";
@@ -70,14 +76,17 @@ constructor() {
 				        </ul> 
 			         	<p class="bold margin-top-20">Ingredients:</p>
 			         	<div class="row">
-					    <select class="browser-default col s5 offset-s3" defaultValue="0" onChange={this.onSelectIngredient.bind(this)}>
-					      <option value="0" disabled>Choose Ingredients</option>
-					      <option value="Tomato sauce">Tomato sauce</option>
-					      <option value="Mozarella">Mozarella</option>
-					      <option value="Mushrooms">Mushrooms</option>
-					    </select>
-					    <i class="material-icons medium col s1 add-ingredient">add_box</i>
+    					    <select class="browser-default col s5 offset-s3" defaultValue="0" onChange={this.onSelectIngredient.bind(this)}>
+    					      <option value="0" disabled>Choose Ingredients</option>
+    					      <option value="Tomato sauce">Tomato sauce</option>
+    					      <option value="Mozarella">Mozarella</option>
+    					      <option value="Mushrooms">Mushrooms</option>
+    					    </select>
+    					    <i onClick={this.addIngredient.bind(this)} class="material-icons medium col s1 add-ingredient">add_box</i>
 					    </div>
+              <div class="row ingredients-row">
+                <span class="col s3 offset-s2 " id="ing"></span>
+              </div>  
 					    <p class="bold margin-top-30">Cheese rand ?</p>
 					    <div class="switch margin-top-20">
 					    	<label>no

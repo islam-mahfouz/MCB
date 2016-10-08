@@ -64,7 +64,7 @@ body {
 }
 
 .red-button, .red-button:hover{
-	background-color: #e83e3e;
+	background-color: #e45050;
 }
 
 .card-layout{
@@ -271,9 +271,21 @@ body {
 }
 
 #order-layout .add-ingredient{
-	color:#ffcc42;
+	color:#ffd486;
 	padding-top: 8px;
 	cursor: pointer;
+}
+
+#order-layout .ingredients-row{
+	margin-top: -20px;
+}
+
+#order-layout .ingredients-row span{
+	background-color: #fff3db;
+	width:120px;
+	height:25px;
+	line-height: 25px;
+	color:#aaa397;
 }
 
 
