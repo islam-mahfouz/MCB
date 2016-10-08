@@ -29,7 +29,7 @@ export default class Confirmation extends React.Component {
         			<p class="bold col s3 offset-s1">Cheese rand:</p>
         		</div>
         		<div class="row margin-top-20">
-        			<p class="col s6">Cheese, Salami, Tomato</p>
+        			<p class="col s6">{this.props.fieldValues.ingredients}</p>
         			<p class="col s3 offset-s1">{this.props.fieldValues.cheese}</p>
         		</div>
         		<p class="bold margin-top-30">Delivery Address:</p>

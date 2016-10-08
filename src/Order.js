@@ -7,7 +7,8 @@ constructor() {
     this.state = {
       selectedCircle:{},
       cheeseAdd: false,
-      ingredient:''
+      ingredient:'',
+      ingredientsArray: []
     };
   }
 
@@ -15,6 +16,12 @@ constructor() {
     this.setState({
       ingredient: e.target.value
     })
+  }
+
+addIngredient(){
+
+    this.state.ingredientsArray.push(this.state.ingredient+" ");
+    this.forceUpdate();
   }
 
   onAddCheese(){
@@ -37,7 +44,7 @@ constructor() {
     var data = {
        pizzaSize   : pizza,
        cheese      : cheeseChoice,
-       Ingredients : []
+       ingredients : [this.state.ingredientsArray]
     }
 
     this.props.saveValues(data);
@@ -52,11 +59,7 @@ constructor() {
      this.setState({selectedCircle: selected});
   }
 
-  addIngredient(){
-
-    var ingredientDiv = this.state.ingredient;
-    document.getElementById('ing').innerHTML = ingredientDiv;
-  }
+  
 
   render() {
   	const { selected } = this.state;
@@ -85,7 +88,7 @@ constructor() {
     					    <i onClick={this.addIngredient.bind(this)} class="material-icons medium col s1 add-ingredient">add_box</i>
 					    </div>
               <div class="row ingredients-row">
-                <span class="col s3 offset-s2 " id="ing"></span>
+                {this.state.ingredientsArray.map(item => <span class="col s3 offset-s2 ">{item}</span> )}
               </div>  
 					    <p class="bold margin-top-30">Cheese rand ?</p>
 					    <div class="switch margin-top-20">
