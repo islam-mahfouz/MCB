@@ -27,11 +27,10 @@ addIngredient(){
   }
 
   deleteIngredient(index) {
-    
-    var array = this.state.ingredientsArray.slice();
-    array.splice(index, 1);
-    this.setState({ingredientsArray: array });
-}
+    this.setState({
+      ingredientsArray: this.state.ingredientsArray.filter((item, i) => i !== index)
+    });
+  }
 
   onAddCheese(){
 
