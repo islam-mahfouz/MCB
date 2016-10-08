@@ -88,7 +88,7 @@ addIngredient(){
     					    <i onClick={this.addIngredient.bind(this)} class="material-icons medium col s1 add-ingredient">add_box</i>
 					    </div>
               <div class="row ingredients-row">
-                {this.state.ingredientsArray.map(item => <span class="col s3 offset-s2 ">{item}</span> )}
+                {this.state.ingredientsArray.map(item => <span class="col s3">{item}<img src="/img/icons/cancel_small.png" /></span> )}
               </div>  
 					    <p class="bold margin-top-30">Cheese rand ?</p>
 					    <div class="switch margin-top-20">

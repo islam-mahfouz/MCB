@@ -278,14 +278,24 @@ body {
 
 #order-layout .ingredients-row{
 	margin-top: -20px;
+	margin-left: 23%;
+	margin-right:23%; 
 }
 
 #order-layout .ingredients-row span{
 	background-color: #fff3db;
-	width:120px;
+	width:130px;
 	height:25px;
 	line-height: 25px;
 	color:#aaa397;
+	padding-right: 10px;
+	position: relative;
+}
+
+#order-layout .ingredients-row img{
+	position: absolute;
+	top: 11px;
+	right: 5px;
 }
 
 
