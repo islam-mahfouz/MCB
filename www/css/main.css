@@ -113,6 +113,28 @@ body {
 	color: black;
 }
 
+#nav-bar .text-grey{
+	color: #dddddd;
+}
+
+#nav-bar .address-text-black{
+	color: black;
+
+}
+
+#nav-bar .finish-text-black{
+	color: black;
+}
+
+#nav-bar li img{
+	padding-top: 25px;
+
+}
+
+#nav-bar .active-tab{
+	border-bottom: solid 3px #e83e3e ;
+}
+
 .brand-logo{
 	margin-left: 2%;
 }

@@ -6,8 +6,15 @@ constructor() {
     super()
     this.state = {
       selectedCircle:{},
-      cheeseAdd: false
+      cheeseAdd: false,
+      ingredient:''
     };
+  }
+
+  onSelectIngredient(e){
+    this.setState({
+      ingredient: e.target.value
+    })
   }
 
   onAddCheese(){
@@ -34,6 +41,7 @@ constructor() {
     }
 
     this.props.saveValues(data);
+    this.props.changeArrowBlack_1();
     this.props.nextCase();
   }
 
@@ -62,11 +70,11 @@ constructor() {
 				        </ul> 
 			         	<p class="bold margin-top-20">Ingredients:</p>
 			         	<div class="row">
-					    <select class="browser-default col s5 offset-s3" defaultValue="0">
+					    <select class="browser-default col s5 offset-s3" defaultValue="0" onChange={this.onSelectIngredient.bind(this)}>
 					      <option value="0" disabled>Choose Ingredients</option>
-					      <option value="1">Tomato sauce</option>
-					      <option value="2">Mozarella</option>
-					      <option value="3">Mushrooms</option>
+					      <option value="Tomato sauce">Tomato sauce</option>
+					      <option value="Mozarella">Mozarella</option>
+					      <option value="Mushrooms">Mushrooms</option>
 					    </select>
 					    <i class="material-icons medium col s1 add-ingredient">add_box</i>
 					    </div>

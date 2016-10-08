@@ -18,7 +18,13 @@ export default class Address extends React.Component {
     }
 
     this.props.saveValues(data);
+    this.props.changeArrowBlack_2();
     this.props.nextCase();
+  }
+
+  goBack(){
+    this.props.changeArrowGrey_1();
+    this.props.previousCase();
   }
 
 
@@ -59,7 +65,7 @@ export default class Address extends React.Component {
             </div>
             <div class="divider"></div>
             <div class="center">
-              <a onClick={this.props.previousCase} class="left back-btn"><img src="/img/icons/back_arrow.png" class="back-arrow"/>Back</a>
+              <a onClick={this.goBack.bind(this)} class="left back-btn"><img src="/img/icons/back_arrow.png" class="back-arrow"/>Back</a>
               <button onClick={this.saveAndContinue.bind(this)} class="waves-effect waves-light btn red-button margin-top-20"><i class="material-icons right">arrow_forward</i>Next</button>            
             </div>       
         </div>

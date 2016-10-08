@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router";
 import NavBar from "./NavBar.js";
 import Card from "./Card.js";
 import Homepage from './Homepage';
