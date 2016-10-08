@@ -4,6 +4,8 @@ import Order from './Order';
 import Address from './Address';
 import Confirmation from './Confirmation';
 import NavBar from './NavBar';
+import NavBarSimple from './NavBarSimple';
+import Finish from './Finish';
 
 
 // in a more bigger project it is of course
@@ -132,7 +134,12 @@ saveValues(fields) {
       );
 
       case 4:
-
+      return(
+        <div>
+          <NavBarSimple/>
+          <Finish fieldValues={fieldValues} />
+        </div>
+      );
     }
   }
 }

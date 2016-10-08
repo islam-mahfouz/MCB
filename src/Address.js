@@ -1,36 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router';
-
-
 export default class Address extends React.Component {
-  
 
   saveAndContinue(e){
     e.preventDefault();
-
     var data = {
-       firstname : this.refs.firstname.value,
-       surname   : this.refs.surname.value,
-       streetName: this.refs.streetName.value,
-       streetNo  : this.refs.streetNo.value,
-       postcode  : this.refs.postcode.value,
-       cityName  : this.refs.cityName.value
-    }
+     firstname : this.refs.firstname.value,
+     surname   : this.refs.surname.value,
+     streetName: this.refs.streetName.value,
+     streetNo  : this.refs.streetNo.value,
+     postcode  : this.refs.postcode.value,
+     cityName  : this.refs.cityName.value
+   }
+   this.props.saveValues(data);
+   this.props.changeArrowBlack_2();
+   this.props.nextCase();
+ }
 
-    this.props.saveValues(data);
-    this.props.changeArrowBlack_2();
-    this.props.nextCase();
-  }
-
-  goBack(){
-    this.props.changeArrowGrey_1();
-    this.props.previousCase();
-  }
-
+ goBack(){
+  this.props.changeArrowGrey_1();
+  this.props.previousCase();
+}
 
   render(){
-  	return(
-  		<div id="address-layout" class="card-layout container">
+    return(
+      <div id="address-layout" class="card-layout container">
         <div class="card-panel white">
             <h5 class="center bold">Delivery Address</h5>
             <div class="row margin-top-40">
@@ -66,12 +60,11 @@ export default class Address extends React.Component {
             <div class="divider"></div>
             <div class="center">
               <a onClick={this.goBack.bind(this)} class="left back-btn"><img src="/img/icons/back_arrow.png" class="back-arrow"/>Back</a>
-              <button onClick={this.saveAndContinue.bind(this)} class="waves-effect waves-light btn red-button margin-top-20"><i class="material-icons right">arrow_forward</i>Next</button>            
+              <a onClick={this.saveAndContinue.bind(this)} class="waves-effect waves-light btn red-button margin-top-20"><i class="material-icons right">arrow_forward</i>Next</a>            
             </div>       
         </div>
       </div>
-  	);
+    );
   }
-
 
 }

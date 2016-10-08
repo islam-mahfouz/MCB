@@ -9,6 +9,7 @@
 3. Order layout
 4. Address layout
 5. Confirmation layout
+6. Finish layout
 -------------------------------------------------------------------*/
 
 
@@ -59,12 +60,20 @@ body {
 	margin-top:60px;
 }
 
+.margin-bottom-30{
+	margin-bottom: 30px;
+}
+
 .bold{
 	font-weight: 600;
 }
 
 .red-button, .red-button:hover{
 	background-color: #e45050;
+}
+
+.green-button, .green-button:hover{
+	background-color: #7cd48a;
 }
 
 .card-layout{
@@ -88,6 +97,9 @@ body {
 	padding-right: 10px;
 }
 
+.check{
+	line-height: 36px !important;
+}
 
 
 /*------------------------------------------------------------------
@@ -326,7 +338,17 @@ body {
 
 
 /*------------------------------------------------------------------
-[4. Confirmation layout]
+[5. Confirmation layout]
 
 -------------------------------------------------------------------*/
 
+
+
+/*------------------------------------------------------------------
+[6. Finish layout]
+
+-------------------------------------------------------------------*/
+
+.close-btn{
+	margin:0 auto;
+}

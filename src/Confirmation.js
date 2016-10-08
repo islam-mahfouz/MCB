@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+
 
 
 export default class Confirmation extends React.Component {
@@ -39,7 +39,7 @@ export default class Confirmation extends React.Component {
         		<div class="divider margin-top-30"></div>
             	<div class="center">
 	              <a onClick={this.goBack.bind(this)} class="left back-btn"><img src="/img/icons/back_arrow.png" class="back-arrow"/>Back</a>
-	              <button  class="waves-effect waves-light btn red-button margin-top-20">Make Order</button>            
+	              <a onClick={this.props.nextCase}  class="waves-effect waves-light btn red-button margin-top-20">Make Order</a>            
 	            </div> 
         	</div>
         </div>
