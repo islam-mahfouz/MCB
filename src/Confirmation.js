@@ -22,7 +22,7 @@ export default class Confirmation extends React.Component {
         async: true
     });
 
-    //this.props.nextCase();
+    this.props.nextCase();
   }
 
   render(){

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class NavBarSimple extends React.Component {
+export default class NavBarFinish extends React.Component {
   
   render() {
     return (

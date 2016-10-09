@@ -3,10 +3,13 @@ import React from 'react';
 export default class NavBar extends React.Component {
   
   orderAction(){
+
   	if(this.props.navButton == 'CANCEL ORDER'){
+  		
   		this.props.previousStep();
   	}
   	else{
+  		
   		this.props.nextStep();
   	}
   }	

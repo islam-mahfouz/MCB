@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Order from './Order';
 import Address from './Address';
 import Confirmation from './Confirmation';
 import NavBar from './NavBar';
-import NavBarSimple from './NavBarSimple';
+import NavBarFinish from './NavBarFinish';
 import Finish from './Finish';
 
 
@@ -136,7 +135,7 @@ saveValues(fields) {
       case 4:
       return(
         <div>
-          <NavBarSimple/>
+          <NavBarFinish/>
           <Finish previousStep={this.props.previousStep} fieldValues={fieldValues} />
         </div>
       );

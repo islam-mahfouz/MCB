@@ -41,8 +41,15 @@ addIngredient(){
 
   saveAndContinue(e){
     e.preventDefault();
+
+    if($.isEmptyObject(this.state.selectedCircle)){
+      alert("Please select a pizza size before advancing!");
+      return;
+    }
+    
     var pizzaObject = JSON.stringify(this.state.selectedCircle);
     var pizza = pizzaObject.substring(2,4);
+     
     if(this.state.cheeseAdd == true)
     {
     	var cheeseChoice = "Yes";

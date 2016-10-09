@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+
 export default class Address extends React.Component {
 
   saveAndContinue(e){
@@ -12,6 +12,7 @@ export default class Address extends React.Component {
      postcode  : this.refs.postcode.value,
      cityName  : this.refs.cityName.value
    }
+   
    this.props.saveValues(data);
    this.props.changeArrowBlack_2();
    this.props.nextCase();
