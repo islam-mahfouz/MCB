@@ -9,6 +9,22 @@ export default class Confirmation extends React.Component {
     this.props.previousCase();
   }
 
+  makeOrder(){
+    var input = this.props.fieldValues;
+    var url = 'https://echo.getpostman.com/post';
+
+    jQuery.ajax({
+        type: "POST",
+        crossDomain:true,
+        url: url,
+        data: input,
+        dataType: 'json',
+        async: true
+    });
+
+    //this.props.nextCase();
+  }
+
   render(){
   	return(
   		<div id="confirmation-layout" class="card-layout container">
@@ -39,7 +55,7 @@ export default class Confirmation extends React.Component {
         		<div class="divider margin-top-30"></div>
             	<div class="center">
 	              <a onClick={this.goBack.bind(this)} class="left back-btn"><img src="/img/icons/back_arrow.png" class="back-arrow"/>Back</a>
-	              <a onClick={this.props.nextCase}  class="waves-effect waves-light btn red-button margin-top-20">Make Order</a>            
+	              <a onClick={this.makeOrder.bind(this)}  class="waves-effect waves-light btn red-button margin-top-20">Make Order</a>            
 	            </div> 
         	</div>
         </div>
