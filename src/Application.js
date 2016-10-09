@@ -25,6 +25,12 @@ constructor() {
   })
 }
 
+previousStep() {
+  this.setState({
+    step : this.state.step - 1
+  })
+}
+
  render(){
   	switch (this.state.step){
   		case 1:
@@ -37,7 +43,7 @@ constructor() {
   		case 2:
   		return(
       <div>
-      	<Card />
+      	<Card previousStep={this.previousStep.bind(this)} />
       </div>);
   	}
   }

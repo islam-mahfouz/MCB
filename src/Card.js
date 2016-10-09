@@ -112,7 +112,7 @@ saveValues(fields) {
       case 1:
       return(
         <div>
-          <NavBar navBarArrow_1={this.state.navBarArrow_1} navBarArrow_2={this.state.navBarArrow_2} navBarColor={this.state.navBarColor} navBarImg={this.state.navBarImg} navBarTextGrey={this.state.navBarTextGrey} navBarTextBlack={this.state.navBarTextBlack} nav1={this.state.nav1} nav2={this.state.nav2} nav3={this.state.nav3} navButton={this.state.navButton}/>
+          <NavBar previousStep={this.props.previousStep} navBarArrow_1={this.state.navBarArrow_1} navBarArrow_2={this.state.navBarArrow_2} navBarColor={this.state.navBarColor} navBarImg={this.state.navBarImg} navBarTextGrey={this.state.navBarTextGrey} navBarTextBlack={this.state.navBarTextBlack} nav1={this.state.nav1} nav2={this.state.nav2} nav3={this.state.nav3} navButton={this.state.navButton}/>
           <Order changeArrowBlack_1={this.changeArrowBlack_1} nextCase={this.nextCase.bind(this)} fieldValues={fieldValues} saveValues={this.saveValues.bind(this)} />
         </div>
       );
@@ -120,7 +120,7 @@ saveValues(fields) {
       case 2:
       return(
         <div>
-          <NavBar navBarArrow_1={this.state.navBarArrow_1} navBarArrow_2={this.state.navBarArrow_2} navBarAddressBlack={this.state.navBarAddressBlack} navBarColor={this.state.navBarColor} navBarImg={this.state.navBarImg} navBarTextGrey={this.state.navBarTextGrey} navBarTextBlack={this.state.navBarTextBlack} nav1={this.state.nav1} nav2={this.state.nav2} nav3={this.state.nav3} navButton={this.state.navButton}/>
+          <NavBar previousStep={this.props.previousStep} navBarArrow_1={this.state.navBarArrow_1} navBarArrow_2={this.state.navBarArrow_2} navBarAddressBlack={this.state.navBarAddressBlack} navBarColor={this.state.navBarColor} navBarImg={this.state.navBarImg} navBarTextGrey={this.state.navBarTextGrey} navBarTextBlack={this.state.navBarTextBlack} nav1={this.state.nav1} nav2={this.state.nav2} nav3={this.state.nav3} navButton={this.state.navButton}/>
           <Address changeArrowBlack_2={this.changeArrowBlack_2} changeArrowGrey_1={this.changeArrowGrey_1} nextCase={this.nextCase.bind(this)} previousCase={this.previousCase.bind(this)} saveValues={this.saveValues.bind(this)} fieldValues={fieldValues} />
         </div>
       );
@@ -128,7 +128,7 @@ saveValues(fields) {
       case 3:
       return(
         <div>
-          <NavBar navBarArrow_1={this.state.navBarArrow_1} navBarArrow_2={this.state.navBarArrow_2} navBarAddressBlack={this.state.navBarAddressBlack} navBarFinishBlack={this.state.navBarFinishBlack} navBarColor={this.state.navBarColor} navBarImg={this.state.navBarImg} navBarTextBlack={this.state.navBarTextBlack} nav1={this.state.nav1} nav2={this.state.nav2} nav3={this.state.nav3} navButton={this.state.navButton}/>
+          <NavBar previousStep={this.props.previousStep} navBarArrow_1={this.state.navBarArrow_1} navBarArrow_2={this.state.navBarArrow_2} navBarAddressBlack={this.state.navBarAddressBlack} navBarFinishBlack={this.state.navBarFinishBlack} navBarColor={this.state.navBarColor} navBarImg={this.state.navBarImg} navBarTextBlack={this.state.navBarTextBlack} nav1={this.state.nav1} nav2={this.state.nav2} nav3={this.state.nav3} navButton={this.state.navButton}/>
           <Confirmation changeArrowGrey_2={this.changeArrowGrey_2} nextCase={this.nextCase.bind(this)} fieldValues={fieldValues}  previousCase={this.previousCase.bind(this)}/>
         </div>
       );
@@ -137,7 +137,7 @@ saveValues(fields) {
       return(
         <div>
           <NavBarSimple/>
-          <Finish fieldValues={fieldValues} />
+          <Finish previousStep={this.props.previousStep} fieldValues={fieldValues} />
         </div>
       );
     }

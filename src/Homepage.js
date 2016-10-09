@@ -3,7 +3,9 @@ import { Link } from 'react-router';
 
 
 export default class Homepage extends React.Component {
-  
+  componentDidMount(){
+    document.body.style.background = "url(/img/background-picture.jpeg) no-repeat center center fixed";
+  }
   render(){
   	return(
   		<div>

@@ -4,7 +4,9 @@ import React from 'react';
 
 export default class Finish extends React.Component {
   
-
+  componentDidMount(){
+    document.body.style.background = "#ffd486" ;    
+}
   render(){
 
   	return(
@@ -16,7 +18,7 @@ export default class Finish extends React.Component {
         	</div>
         </div>
         <div class="row margin-top-20">
-            <a  class="waves-effect waves-light btn red-button col s2 offset-s5 close-btn">CLOSE</a>
+            <a  onClick={this.props.previousStep} class="waves-effect waves-light btn red-button col s2 offset-s5 close-btn">CLOSE</a>
         </div>    
       </div>
   	);
