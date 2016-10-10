@@ -1,5 +1,3 @@
-@charset UTF-8;
-
 /*------------------------------------------------------------------
 [Style Index]
 
@@ -11,210 +9,212 @@
 5. Confirmation layout
 6. Finish layout
 -------------------------------------------------------------------*/
-
-
 /*------------------------------------------------------------------
 [0. Custom Reset and utilities]
 
 Reseting styles for individual elements and create utility classes
 -------------------------------------------------------------------*/
+/* line 19, main.scss */
 body {
-	font-size: 16px;
-	font-family: "PT Sans", serif;
-	margin: 0;
-	padding: 0;
-	color: #fff;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-
+  font-size: 16px;
+  font-family: "PT Sans", serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.margin-top-10{
-	margin-top:10px;
+/* line 32, main.scss */
+.margin-top-10 {
+  margin-top: 10px;
 }
 
-.margin-top-20{
-	margin-top:20px;
+/* line 36, main.scss */
+.margin-top-20 {
+  margin-top: 20px;
 }
 
-.margin-top-30{
-	margin-top:30px;
+/* line 40, main.scss */
+.margin-top-30 {
+  margin-top: 30px;
 }
 
-.margin-top-40{
-	margin-top:40px;
+/* line 44, main.scss */
+.margin-top-40 {
+  margin-top: 40px;
 }
 
-.margin-top-50{
-	margin-top:50px;
+/* line 48, main.scss */
+.margin-top-50 {
+  margin-top: 50px;
 }
 
-.margin-top-60{
-	margin-top:60px;
+/* line 52, main.scss */
+.margin-top-60 {
+  margin-top: 60px;
 }
 
-.margin-bottom-30{
-	margin-bottom: 30px;
+/* line 56, main.scss */
+.margin-bottom-30 {
+  margin-bottom: 30px;
 }
 
-.bold{
-	font-weight: 600;
+/* line 60, main.scss */
+.bold {
+  font-weight: 600;
 }
 
-.red-button, .red-button:hover{
-	background-color: #e45050;
+/* line 64, main.scss */
+.red-button, .red-button:hover {
+  background-color: #e45050;
 }
 
-.green-button, .green-button:hover{
-	background-color: #7cd48a;
+/* line 68, main.scss */
+.green-button, .green-button:hover {
+  background-color: #7cd48a;
 }
 
-.card-layout{
-	max-width: 600px;
-	margin-top: 40px;
-	color:black;
+/* line 72, main.scss */
+.card-layout {
+  max-width: 600px;
+  margin-top: 40px;
+  color: black;
 }
 
-.clear-fix{
-	clear: both;
+/* line 78, main.scss */
+.clear-fix {
+  clear: both;
 }
 
-.back-btn{
-	font-size: 0.8em;
-	padding-top: 30px;
-	color: #A8A8A8;
-	cursor: pointer;
+/* line 82, main.scss */
+.back-btn {
+  font-size: 0.8em;
+  padding-top: 30px;
+  color: #A8A8A8;
+  cursor: pointer;
 }
 
-.back-arrow{
-	padding-right: 10px;
+/* line 89, main.scss */
+.back-arrow {
+  padding-right: 10px;
 }
 
-.check{
-	line-height: 36px !important;
+/* line 93, main.scss */
+.check {
+  line-height: 36px !important;
 }
-
 
 /*------------------------------------------------------------------
 [1. NavBar]
 
 -------------------------------------------------------------------*/
-
-#nav-bar{
-	
-	background-color:rgba(255,255,255,0.1);
+/* line 103, main.scss */
+#nav-bar {
+  background-color: rgba(255, 255, 255, 0.1);
 }
-
-#nav-bar .white{
-	background-color: white;
+/* line 105, main.scss */
+#nav-bar .white {
+  background-color: white;
 }
-
-#nav-bar a{
-	font-size: 0.75em;
-	font-weight: 600;
+/* line 108, main.scss */
+#nav-bar a {
+  font-size: 0.75em;
+  font-weight: 600;
 }
-
-#nav-bar .text-black{
-	color: black;
+/* line 112, main.scss */
+#nav-bar .text-black {
+  color: black;
 }
-
-#nav-bar .text-grey{
-	color: #dddddd;
+/* line 115, main.scss */
+#nav-bar .text-grey {
+  color: #dddddd;
 }
-
-#nav-bar .address-text-black{
-	color: black;
-
+/* line 118, main.scss */
+#nav-bar .address-text-black, #nav-bar .finish-text-black {
+  color: black;
 }
-
-#nav-bar .finish-text-black{
-	color: black;
+/* line 121, main.scss */
+#nav-bar li img {
+  padding-top: 25px;
 }
-
-#nav-bar li img{
-	padding-top: 25px;
-
+/* line 124, main.scss */
+#nav-bar .brand-logo {
+  margin-left: 2%;
 }
-
-#nav-bar .brand-logo{
-	margin-left: 2%;
+/* line 126, main.scss */
+#nav-bar .brand-logo img {
+  display: inline;
+  height: 20px;
+  margin-top: 20px;
+  padding-right: 10px;
 }
-
-#nav-bar .brand-logo img{
-	display: inline;
-	height: 20px;
-	margin-top: 20px;
-	padding-right: 10px;
-}
-
 
 /*------------------------------------------------------------------
 [2. Homepage]
 
 -------------------------------------------------------------------*/
-
-#homepage{
-	margin-top:40px;
+/* line 140, main.scss */
+#homepage {
+  margin-top: 40px;
 }
-
-#homepage .today-meal, .tomorrow-meal{
-	font-size: 1.25em;
+/* line 142, main.scss */
+#homepage .today-meal {
+  font-size: 1.25em;
 }
-
-#homepage .today-meal span{
-	border-bottom: solid 3px #e83e3e ;
-	font-weight: 600;
-	white-space: nowrap;
-
+/* line 144, main.scss */
+#homepage .today-meal span {
+  border-bottom: solid 3px #e83e3e;
+  font-weight: 600;
+  white-space: nowrap;
 }
-
-#homepage .red-button{
-	margin-top:80px;
-	box-shadow: 0 5px 0 0 #bc3232;
-	position: relative;
+/* line 150, main.scss */
+#homepage .red-button {
+  margin-top: 80px;
+  box-shadow: 0 5px 0 0 #bc3232;
+  position: relative;
 }
-
-#homepage .red-button:hover{
-	top:2px;
-	box-shadow: 0 3px 0 0 #bc3232;
+/* line 154, main.scss */
+#homepage .red-button:hover {
+  top: 2px;
+  box-shadow: 0 3px 0 0 #bc3232;
 }
-
-#homepage .tomorrow-meal{
-	margin-top: 180px;
+/* line 159, main.scss */
+#homepage .tomorrow-meal {
+  font-size: 1.25em;
+  margin-top: 180px;
 }
-
-#homepage .made-with-love{
-	margin-top: 20px;
-	font-size: 0.8em;
+/* line 163, main.scss */
+#homepage .made-with-love {
+  margin-top: 20px;
+  font-size: 0.8em;
 }
-
-#homepage .scroll-img{
-	height: 25px;
-	margin-top: 20px;
+/* line 167, main.scss */
+#homepage .scroll-img {
+  height: 25px;
+  margin-top: 20px;
 }
 
 /*------------------------------------------------------------------
 [3. Order Layout]
 
 -------------------------------------------------------------------*/
-
-
-#order-layout ul li:not(:last-child){
-	padding-right: 25px;
-	
+/* line 179, main.scss */
+#order-layout ul {
+  padding-left: 40px;
 }
-
-#order-layout ul li{
-	display: inline-block;
+/* line 180, main.scss */
+#order-layout ul li {
+  display: inline-block;
 }
-
-#order-layout ul{
-	padding-left: 40px;
+/* line 181, main.scss */
+#order-layout ul li:not(:last-child) {
+  padding-right: 25px;
 }
-
-#order-layout .circle-20{
+/* line 188, main.scss */
+#order-layout .circle-20 {
   height: 50px;
   width: 50px;
   line-height: 50px;
@@ -224,10 +224,9 @@ body {
   background: #fff;
   text-align: center;
   vertical-align: middle;
-
- }
-
-#order-layout .circle-30{
+}
+/* line 199, main.scss */
+#order-layout .circle-30 {
   height: 70px;
   width: 70px;
   line-height: 70px;
@@ -238,8 +237,8 @@ body {
   text-align: center;
   vertical-align: middle;
 }
-
-#order-layout .circle-40{
+/* line 210, main.scss */
+#order-layout .circle-40 {
   height: 100px;
   width: 100px;
   line-height: 100px;
@@ -249,97 +248,88 @@ body {
   background: #fff;
   text-align: center;
   vertical-align: middle;
-
 }
-
-#order-layout .hovered-circle:hover{
-	background-color: #e83e3e;
-	cursor: pointer;
-	color: white;
+/* line 221, main.scss */
+#order-layout .hovered-circle:hover {
+  background-color: #e83e3e;
+  cursor: pointer;
+  color: white;
 }
-
-#order-layout .active-circle{
-	background-color: #e83e3e;
-	color:white;
+/* line 226, main.scss */
+#order-layout .active-circle {
+  background-color: #e83e3e;
+  color: white;
 }
-
-#order-layout select{
-	background-color: #ededed;
-	color: black;
-	opacity: 0.4;
-	margin-top: 15px;
-	border:1px solid black;
-
-	
+/* line 230, main.scss */
+#order-layout select {
+  background-color: #ededed;
+  color: black;
+  opacity: 0.4;
+  margin-top: 15px;
+  border: 1px solid black;
 }
-
-#order-layout .add-ingredient{
-	color:#ffd486;
-	padding-top: 8px;
-	cursor: pointer;
+/* line 237, main.scss */
+#order-layout .add-ingredient {
+  color: #ffd486;
+  padding-top: 8px;
+  cursor: pointer;
 }
-
-#order-layout .ingredients-row{
-	margin-top: -20px;
-	margin-left: 23%;
-	margin-right:23%; 
+/* line 242, main.scss */
+#order-layout .ingredients-row {
+  margin-top: -20px;
+  margin-left: 23%;
+  margin-right: 23%;
 }
-
-#order-layout .ingredients-row span{
-	background-color: #fff3db;
-	width:130px;
-	height:25px;
-	line-height: 25px;
-	color:#aaa397;
-	padding-right: 10px;
-	position: relative;
+/* line 246, main.scss */
+#order-layout .ingredients-row span {
+  background-color: #fff3db;
+  width: 130px;
+  height: 25px;
+  line-height: 25px;
+  color: #aaa397;
+  padding-right: 10px;
+  position: relative;
 }
-
-#order-layout .ingredients-row img{
-	position: absolute;
-	top: 11px;
-	right: 5px;
+/* line 255, main.scss */
+#order-layout .ingredients-row img {
+  position: absolute;
+  top: 11px;
+  right: 5px;
 }
-
 
 /*------------------------------------------------------------------
 [4. Address layout]
 
 -------------------------------------------------------------------*/
-
+/* line 269, main.scss */
 #address-layout p {
-	padding-bottom: 15px;
-	font-size: 0.8em;
+  padding-bottom: 15px;
+  font-size: 0.8em;
 }
-
-#address-layout input{
-	border:2px solid #ededed;
-	padding-left: 10px;
-	background-color:rgba(237,237,237,0.5)
+/* line 273, main.scss */
+#address-layout input {
+  border: 2px solid #ededed;
+  padding-left: 10px;
+  background-color: rgba(237, 237, 237, 0.5);
 }
-
-#address-layout .row{
-	margin-bottom:0; 
+/* line 278, main.scss */
+#address-layout .row {
+  margin-bottom: 0;
 }
-
-#address-layout .street-no, #address-layout .city{
-	padding-top: 27px;
+/* line 281, main.scss */
+#address-layout .street-no, #address-layout .city {
+  padding-top: 27px;
 }
-
-
 
 /*------------------------------------------------------------------
 [5. Confirmation layout]
 
 -------------------------------------------------------------------*/
-
-
-
 /*------------------------------------------------------------------
 [6. Finish layout]
 
 -------------------------------------------------------------------*/
-
-.close-btn{
-	margin:0 auto;
+/* line 299, main.scss */
+.close-btn {
+  margin: 0 auto;
 }

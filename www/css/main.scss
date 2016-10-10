@@ -1,0 +1,301 @@
+/*------------------------------------------------------------------
+[Style Index]
+
+0. Custom reset and utilities 
+1. NavBar
+2. Homepage
+3. Order layout
+4. Address layout
+5. Confirmation layout
+6. Finish layout
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[0. Custom Reset and utilities]
+
+Reseting styles for individual elements and create utility classes
+-------------------------------------------------------------------*/
+body {
+	font-size: 16px;
+	font-family: "PT Sans", serif;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+
+}
+
+.margin-top-10{
+	margin-top:10px;
+}
+
+.margin-top-20{
+	margin-top:20px;
+}
+
+.margin-top-30{
+	margin-top:30px;
+}
+
+.margin-top-40{
+	margin-top:40px;
+}
+
+.margin-top-50{
+	margin-top:50px;
+}
+
+.margin-top-60{
+	margin-top:60px;
+}
+
+.margin-bottom-30{
+	margin-bottom: 30px;
+}
+
+.bold{
+	font-weight: 600;
+}
+
+.red-button, .red-button:hover{
+	background-color: #e45050;
+}
+
+.green-button, .green-button:hover{
+	background-color: #7cd48a;
+}
+
+.card-layout{
+	max-width: 600px;
+	margin-top: 40px;
+	color:black;
+}
+
+.clear-fix{
+	clear: both;
+}
+
+.back-btn{
+	font-size: 0.8em;
+	padding-top: 30px;
+	color: #A8A8A8;
+	cursor: pointer;
+}
+
+.back-arrow{
+	padding-right: 10px;
+}
+
+.check{
+	line-height: 36px !important;
+}
+
+
+/*------------------------------------------------------------------
+[1. NavBar]
+
+-------------------------------------------------------------------*/
+
+#nav-bar {
+  background-color: rgba(255, 255, 255, 0.1);
+  .white {
+    background-color: white;
+  }
+  a {
+    font-size: 0.75em;
+    font-weight: 600;
+  }
+  .text-black {
+    color: black;
+  }
+  .text-grey {
+    color: #dddddd;
+  }
+  .address-text-black, .finish-text-black {
+    color: black;
+  }
+  li img {
+    padding-top: 25px;
+  }
+  .brand-logo {
+    margin-left: 2%;
+    img {
+      display: inline;
+      height: 20px;
+      margin-top: 20px;
+      padding-right: 10px;
+    }
+  }
+}
+
+/*------------------------------------------------------------------
+[2. Homepage]
+
+-------------------------------------------------------------------*/
+
+#homepage {
+	margin-top: 40px;
+  .today-meal {
+  	font-size: 1.25em;
+	  	span {
+	    border-bottom: solid 3px #e83e3e;
+	    font-weight: 600;
+	    white-space: nowrap;
+	  }
+	}
+  .red-button {
+    margin-top: 80px;
+    box-shadow: 0 5px 0 0 #bc3232;
+    position: relative;
+    &:hover {
+      top: 2px;
+      box-shadow: 0 3px 0 0 #bc3232;
+    }
+  }
+  .tomorrow-meal {
+  	font-size: 1.25em;
+    margin-top: 180px;
+  }
+  .made-with-love {
+    margin-top: 20px;
+    font-size: 0.8em;
+  }
+  .scroll-img {
+    height: 25px;
+    margin-top: 20px;
+  }
+}
+
+/*------------------------------------------------------------------
+[3. Order Layout]
+
+-------------------------------------------------------------------*/
+
+#order-layout {
+  ul {
+    li {
+      &:not(:last-child) {
+        padding-right: 25px;
+      }
+      display: inline-block;
+    }
+    padding-left: 40px;
+  }
+  .circle-20 {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border: 3px solid #dddddd;
+    border-radius: 50%;
+    color: #666;
+    background: #fff;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .circle-30 {
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    border: 3px solid #dddddd;
+    border-radius: 50%;
+    color: #666;
+    background: #fff;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .circle-40 {
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    border: 3px solid #dddddd;
+    border-radius: 50%;
+    color: #666;
+    background: #fff;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .hovered-circle:hover {
+    background-color: #e83e3e;
+    cursor: pointer;
+    color: white;
+  }
+  .active-circle {
+    background-color: #e83e3e;
+    color: white;
+  }
+  select {
+    background-color: #ededed;
+    color: black;
+    opacity: 0.4;
+    margin-top: 15px;
+    border: 1px solid black;
+  }
+  .add-ingredient {
+    color: #ffd486;
+    padding-top: 8px;
+    cursor: pointer;
+  }
+  .ingredients-row {
+    margin-top: -20px;
+    margin-left: 23%;
+    margin-right: 23%;
+    span {
+      background-color: #fff3db;
+      width: 130px;
+      height: 25px;
+      line-height: 25px;
+      color: #aaa397;
+      padding-right: 10px;
+      position: relative;
+    }
+    img {
+      position: absolute;
+      top: 11px;
+      right: 5px;
+    }
+  }
+}
+
+/*------------------------------------------------------------------
+[4. Address layout]
+
+-------------------------------------------------------------------*/
+
+#address-layout {
+  p {
+    padding-bottom: 15px;
+    font-size: 0.8em;
+  }
+  input {
+    border: 2px solid #ededed;
+    padding-left: 10px;
+    background-color: rgba(237, 237, 237, 0.5);
+  }
+  .row {
+    margin-bottom: 0;
+  }
+  .street-no, .city {
+    padding-top: 27px;
+  }
+}
+
+
+/*------------------------------------------------------------------
+[5. Confirmation layout]
+
+-------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------
+[6. Finish layout]
+
+-------------------------------------------------------------------*/
+
+.close-btn{
+	margin:0 auto;
+}
