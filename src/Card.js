@@ -40,8 +40,7 @@ export default class Card extends React.Component {
       navBarAddressBlack : "address-text-black",
       navBarFinishBlack : "finish-text-black",
       navBarArrow_1: "/img/icons/arrow_process.png",
-      navBarArrow_2: "/img/icons/arrow_process.png",
-      activeTab : ''
+      navBarArrow_2: "/img/icons/arrow_process.png"
     };
 
     this.changeArrowBlack_1 = this.changeArrowBlack_1.bind(this);
@@ -71,12 +70,6 @@ export default class Card extends React.Component {
   changeArrowGrey_2() {
     this.setState({
       navBarArrow_2: "/img/icons/arrow_process.png"
-    })
-  }
-
-  setActiveTab(){
-    this.setState({
-      activeTab: "active-tab"
     })
   }
 

@@ -22,7 +22,14 @@ constructor() {
   }
 
 addIngredient(){
-
+    if(this.state.ingredient == ""){
+      alert("Please choose an ingredient first");
+      return;
+    }
+    if(this.state.ingredientsArray.includes(this.state.ingredient+" ")){
+      alert("You have already chosen this ingredient, please choose a different one");
+      return;
+    }
     this.state.ingredientsArray.push(this.state.ingredient+" ");
     this.forceUpdate();
   }

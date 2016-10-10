@@ -2,6 +2,8 @@ import React from 'react';
 
 export default class Address extends React.Component {
 
+
+  
   saveAndContinue(e){
     e.preventDefault();
     var data = {
@@ -14,18 +16,18 @@ export default class Address extends React.Component {
    }
 
    var isValid;
-   $("input").each(function() {
-     var inputField = $(this);
-     if (inputField.val() == "") {
-       isValid = false;
-     }
-   });
+   $('input').each(function() {
+        if(!$(this).val()){
 
-   if(!isValid){
+           isValid = false;
+        }
+    });
+
+   if(isValid == false){
     alert("Please make sure to fill out all the fields");
     return;
   }
-  
+
   this.props.saveValues(data);
   this.props.changeArrowBlack_2();
   this.props.nextCase();

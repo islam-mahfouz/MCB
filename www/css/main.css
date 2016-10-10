@@ -138,15 +138,11 @@ body {
 
 }
 
-#nav-bar .active-tab{
-	border-bottom: solid 3px #e83e3e ;
-}
-
-.brand-logo{
+#nav-bar .brand-logo{
 	margin-left: 2%;
 }
 
-.brand-logo img{
+#nav-bar .brand-logo img{
 	display: inline;
 	height: 20px;
 	margin-top: 20px;

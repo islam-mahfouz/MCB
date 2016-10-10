@@ -9,6 +9,18 @@ export default class Confirmation extends React.Component {
     this.props.previousCase();
   }
 
+  resetOrderValues(){
+    this.props.fieldValues.firstname = null;
+    this.props.fieldValues.surname = null;
+    this.props.fieldValues.streetName = null;
+    this.props.fieldValues.streetNo = null;
+    this.props.fieldValues.postcode = null;
+    this.props.fieldValues.cityName = null;
+    this.props.fieldValues.pizzaSize = null;
+    this.props.fieldValues.cheese = null;
+    this.props.fieldValues.ingredients = [];
+  }
+
   makeOrder(){
     var input = this.props.fieldValues;
     var url = 'https://echo.getpostman.com/post';
@@ -21,7 +33,8 @@ export default class Confirmation extends React.Component {
         dataType: 'json',
         async: true
     });
-
+  
+    this.resetOrderValues.bind(this)();
     this.props.nextCase();
   }
 
