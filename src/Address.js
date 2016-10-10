@@ -12,13 +12,26 @@ export default class Address extends React.Component {
      postcode  : this.refs.postcode.value,
      cityName  : this.refs.cityName.value
    }
-   
-   this.props.saveValues(data);
-   this.props.changeArrowBlack_2();
-   this.props.nextCase();
- }
 
- goBack(){
+   var isValid;
+   $("input").each(function() {
+     var inputField = $(this);
+     if (inputField.val() == "") {
+       isValid = false;
+     }
+   });
+
+   if(!isValid){
+    alert("Please make sure to fill out all the fields");
+    return;
+  }
+  
+  this.props.saveValues(data);
+  this.props.changeArrowBlack_2();
+  this.props.nextCase();
+}
+
+goBack(){
   this.props.changeArrowGrey_1();
   this.props.previousCase();
 }
