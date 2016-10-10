@@ -49,6 +49,10 @@ export default class Card extends React.Component {
     this.changeArrowGrey_2 = this.changeArrowGrey_2.bind(this);
   }
 
+  componentDidMount(){
+    $(".button-collapse").sideNav();
+  }
+
   changeArrowBlack_1() {
     this.setState({
       navBarArrow_1: "/img/icons/arrow_process-black.png"

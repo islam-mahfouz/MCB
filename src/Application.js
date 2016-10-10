@@ -17,8 +17,9 @@ constructor() {
       nav3: "MORE",
       navButton: "ORDER TODAY'S MEAL"
     };
-  }	
+  }
 
+  
   nextStep() {
   this.setState({
     step : this.state.step + 1

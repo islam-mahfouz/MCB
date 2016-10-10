@@ -29,9 +29,9 @@ export default class NavBar extends React.Component {
 		        <li><a onClick={this.orderAction.bind(this)} class="waves-effect waves-light btn red-button">{this.props.navButton}</a></li>
 		      </ul>
 		      <ul  class="side-nav" id="mobile-demo">
-		        <li><a href="JavaScript:">{this.props.nav1}</a></li>
-		        <li><a href="JavaScript:">{this.props.nav2}</a></li>
-		        <li><a href="JavaScript:">{this.props.nav3}</a></li>
+		        <li><a class={this.props.navBarTextBlack} href="JavaScript:">{this.props.nav1}</a></li>
+		        <li><a class={this.props.navBarTextGrey + " " + this.props.navBarAddressBlack} href="JavaScript:">{this.props.nav2}</a></li>
+		        <li><a class={this.props.navBarTextGrey + " " + this.props.navBarFinishBlack} href="JavaScript:">{this.props.nav3}</a></li>
 		        <li><a onClick={this.orderAction.bind(this)} class="waves-effect waves-light btn red-button">{this.props.navButton}</a></li>
 		      </ul>
 		    </div>
